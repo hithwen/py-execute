@@ -4,7 +4,7 @@ Created on 03/07/2013
 @author: julia
 '''
 from unittest import TestCase
-from biicode.lib.process_executor.outputstream_wrapper import OutputStreamWrapper
+from py_execute.outputstream_wrapper import OutputStreamWrapper
 from StringIO import StringIO
 import tempfile
 import re

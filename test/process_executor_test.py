@@ -6,9 +6,9 @@ Created on 19/06/2013
 import unittest
 from StringIO import StringIO
 import platform
-from biicode.lib.process_executor.process_executor import execute
-from biicode.lib.process_executor.basicuserio import BasicUserIO
-from biicode.lib.process_executor.outputstream_wrapper import OutputStreamWrapper
+from py_execute.process_executor import execute
+from py_execute.basicuserio import BasicUserIO
+from py_execute.outputstream_wrapper import OutputStreamWrapper
 import sys
 from nose.plugins.attrib import attr
 
