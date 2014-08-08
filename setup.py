@@ -9,8 +9,8 @@ setup(
     description = "External process executor wrapper",
     author = "Julia S.Simon",
     author_email = "julia.simon@biicode.com",
-    #url = "http://chardet.feedparser.org/",
-    #download_url = "http://chardet.feedparser.org/download/python3-chardet-1.0.1.tgz",
+    url = "https://github.com/biicode/py-execute",
+    download_url = "https://pypi.python.org/packages/source/p/py-execute/py-execute-0.1.tar.gz",
     keywords = ["process", "execute", "output"],
     classifiers = [
         "Programming Language :: Python",
