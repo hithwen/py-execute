@@ -4,7 +4,8 @@ Created on 15/04/2013
 @author: julia, laso
 
 Execute external process without user input
-It handles long outputs on different platforms
+It handles very long outputs on different platforms
+
 Prints output both to stdout and a variable to return
 '''
 from basicuserio import BasicUserIO

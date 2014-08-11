@@ -1,5 +1,7 @@
 '''
 Main application entry point
+Note: If you execute a command that needs user_input and has
+      a VERY long output it may hang
 '''
 
 from subprocess import Popen, PIPE, STDOUT
@@ -12,7 +14,8 @@ def execute(cmd, user_input=None, env=None):
     '''
     Execute external process
     Params:
-        user_input: array of strings
+        user_input: string, ending in '\n'
+                    e.g. 'name\npwd\n'
         env: dict containint environment
     '''
     user_input = user_input or []

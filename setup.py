@@ -5,7 +5,7 @@ from distutils.core import setup
 setup(
     name = "py-execute",
     packages = ["py_execute"],
-    version = "0.1",
+    version = "0.1.1",
     description = "External process executor wrapper",
     author = "Julia S.Simon",
     author_email = "julia.simon@biicode.com",

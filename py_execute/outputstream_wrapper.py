@@ -40,6 +40,8 @@ class Color(object):
 class OutputStreamWrapper(object):
     '''Wraps an output stream, it can be constructed with sys.stdout, StringIO, cStringIO or any
     other file implementing class.
+    It prints to a stream and, optionally, to a log file
+    Useful for testing if you want to collect output across an execution.
     '''
     color = False
 

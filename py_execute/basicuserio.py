@@ -11,6 +11,11 @@ class BasicUserIO(object):
     """Class to bypass output and input"""
 
     def __init__(self, ins=sys.stdin, out=None):
+        '''
+        Params:
+            ins: input stream
+            out: output stream, should have write method
+        '''
         self._ins = ins
         if not out:
             out = OutputStreamWrapper(sys.stdout)
