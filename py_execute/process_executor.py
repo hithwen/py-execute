@@ -43,6 +43,8 @@ import sys
 
 def execute_mac(command, ui, cwd, env, shell):
     '''Spaws a process to execute given command'''
+    import errno
+
     master_fd, slave_fd = os.pipe()
     if not env:
         env = {}
@@ -55,8 +57,8 @@ def execute_mac(command, ui, cwd, env, shell):
     timeout = 1
     stdout = []
 
-    try:
-        while proc.poll() is None:
+    while proc.poll() is None:
+        try:
             inputready, _, _ = select.select([master_fd, sys.stdin], [], [], timeout)
             if inputready:
                 data = os.read(master_fd, MAX_OUPUT_SIZE)
@@ -64,8 +66,9 @@ def execute_mac(command, ui, cwd, env, shell):
                     ui.out.write(data)
                     stdout.append(data)
                     ui.out.flush(truncate=False)
-    except:
-        pass
+        except OSError, e:
+            if e.errno != errno.EINTR:
+                raise
 
     out, err = proc.communicate()
     os.close(slave_fd)  # can't do it sooner: it leads to errno.EIO error
