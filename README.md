@@ -15,10 +15,31 @@ Examples
     >>> ret
     'Hello World\n'
 
+Command with input
+
     >>> ret = run_command.execute('read -p "Do you like py-executor?" yn; case $yn in [yY]* ) echo "cool";; esac', user_input='y\n')
     cool
     >>> ret
     'cool\n'
+
+If you dont want real time output:
+
+	>>> from py_execute.process_executor import execute
+	>>> execute('echo "Hello"', ui=Mock())
+	(0, 'Hello\n')
+
+If you want to dump all output in a StringIO:
+
+    >>> from py_execute.process_executor import execute
+	>>> from py_execute.basicuserio import BasicUserIO
+	>>> from py_execute.outputstream_wrapper import OutputStreamWrapper
+	>>> from StringIO import StringIO
+	>>> ui = BasicUserIO(out=OutputStreamWrapper(StringIO()))
+	>>> execute('echo "Hello"', ui=ui)
+	(0, 'Hello\n')
+	>>> str(ui.out)
+	'Hello\n'
+
 
 Install
 -------
