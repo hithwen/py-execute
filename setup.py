@@ -5,9 +5,9 @@ from distutils.core import setup
 setup(
     name = "py-execute",
     packages = ["py_execute"],
-    version = "0.1.4",
+    version = "0.1.5",
     description = "External process executor wrapper",
-    install_requires=["colorama == 0.2.5",],
+    install_requires=["colorama == 0.2.7",],
     author = "Julia S.Simon",
     author_email = "julia.simon@biicode.com",
     url = "https://github.com/biicode/py-execute",

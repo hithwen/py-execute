@@ -48,9 +48,9 @@ def execute_unix(cmd, user_input, env):
         output.append(out)
     err = err or ""
     output = ''.join(output)
-    out = output + err
+    out = output + '\n' + err
     print out
-    return err
+    return out
 
 
 def execute_windows(cmd, user_input, env):
