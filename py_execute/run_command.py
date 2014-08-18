@@ -1,7 +1,7 @@
 '''
 Main application entry point
 Note: If you execute a command that needs user_input and has
-      a VERY long output it may hang
+      a long output it may hang, try to avoid commands with input when possible
 '''
 
 from subprocess import Popen, PIPE, STDOUT
@@ -54,7 +54,6 @@ def execute_unix(cmd, user_input, env):
 
 
 def execute_windows(cmd, user_input, env):
-    cmd = cmd.split(' ')
     proc = Popen(cmd, shell=True, bufsize=1, stdout=PIPE,
                  stdin=PIPE, stderr=STDOUT, env=env)
     out, err = proc.communicate(input=user_input)
