@@ -43,6 +43,7 @@ def execute_unix(cmd, user_input, env):
         if not line:
             break
         output.append(line)
+        print line
     out, err = proc.communicate()
     if out:
         output.append(out)
