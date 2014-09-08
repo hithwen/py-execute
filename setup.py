@@ -5,7 +5,7 @@ from distutils.core import setup
 setup(
     name = "py-execute",
     packages = ["py_execute"],
-    version = "0.1.6",
+    version = "0.1.7",
     description = "External process executor wrapper",
     install_requires=["colorama == 0.2.7",],
     author = "Julia S.Simon",
