@@ -17,25 +17,30 @@ LEVEL = {DEBUG: 'DEBUG', INFO: 'INFO', WARN: 'WARN', ERROR: 'ERROR'}
 
 class Color(object):
     RED = Fore.RED  # @UndefinedVariable
-    BACK_RED = Back.RED  # @UndefinedVariable
+    WHITE = Fore.WHITE  # @UndefinedVariable
+    CYAN = Fore.CYAN  # @UndefinedVariable
+    GREEN = Fore.GREEN  # @UndefinedVariable
+    MAGENTA = Fore.MAGENTA  # @UndefinedVariable
+    BLUE = Fore.BLUE  # @UndefinedVariable
+    YELLOW = Fore.YELLOW  # @UndefinedVariable
+    BLACK = Fore.BLACK  # @UndefinedVariable
+   
     BRIGHT_RED = Style.BRIGHT + Fore.RED  # @UndefinedVariable
     BRIGHT_BLUE = Style.BRIGHT + Fore.BLUE  # @UndefinedVariable
     BRIGHT_YELLOW = Style.BRIGHT + Fore.YELLOW  # @UndefinedVariable
-    YELLOW = Fore.YELLOW  # @UndefinedVariable
+    BRIGHT_GREEN = Style.BRIGHT + Fore.GREEN  # @UndefinedVariable
+    BRIGHT_CYAN = Style.BRIGHT + Fore.CYAN   # @UndefinedVariable
+    BRIGHT_WHITE = Style.BRIGHT + Fore.WHITE   # @UndefinedVariable
+    BRIGHT_MAGENTA = Style.BRIGHT + Fore.MAGENTA   # @UndefinedVariable
+    
     BACK_YELLOW = Back.YELLOW  # @UndefinedVariable
-    BLUE = Fore.BLUE  # @UndefinedVariable
     BACK_BLUE = Back.BLUE  # @UndefinedVariable
     BACK_BLACK = Back.BLACK  # @UndefinedVariable
-    MAGENTA = Fore.MAGENTA  # @UndefinedVariable
     BACK_MAGENTA = Back.MAGENTA  # @UndefinedVariable
-    GREEN = Fore.GREEN  # @UndefinedVariable
-    BRIGHT_GREEN = Style.BRIGHT + Fore.GREEN  # @UndefinedVariable
-    BACK_GREEN = Back.GREEN  # @UndefinedVariable
-    CYAN = Fore.CYAN  # @UndefinedVariable
-    BRIGHT_CYAN = Style.BRIGHT + Fore.CYAN   # @UndefinedVariable
     BACK_CYAN = Back.CYAN  # @UndefinedVariable
-    WHITE = Fore.WHITE  # @UndefinedVariable
-
+    BACK_GREEN = Back.GREEN  # @UndefinedVariable
+    BACK_RED = Back.RED  # @UndefinedVariable
+    BACK_WHITE = Back.WHITE   # @UndefinedVariable
 
 class OutputStreamWrapper(object):
     '''Wraps an output stream, it can be constructed with sys.stdout, StringIO, cStringIO or any
