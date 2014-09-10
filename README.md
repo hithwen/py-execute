@@ -1,5 +1,5 @@
-py-execute
-==========
+py-execute  [![Build Status](https://travis-ci.org/hithwen/py-execute.svg?branch=master)](https://travis-ci.org/hithwen/py-execute)
+===================
 
 Python multi OS wrapper to run external proccesses. It allows you to see real time output but also get all the output in a single string in the return value.
 It can also handle user input.
